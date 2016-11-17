@@ -1,0 +1,22 @@
+if motor=on and val1=on and val2=off and nivel1<80 then
+nivel1=nivel1+10;
+endif;
+
+if motor=on and val2=on and nivel1>0 then
+nivel1=nivel1-10;
+val1=off;
+endif;
+
+if val3=on and nivel1>0 then;
+nivel1=nivel1-10;
+endif;
+
+if nivel1=80 then
+val1=off;
+endif;
+
+if nivel1=0 then
+val2=off;
+endif;
+
+porcentaje=100*nivel1/80;
